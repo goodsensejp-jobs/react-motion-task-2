@@ -1,0 +1,27 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 300;
+}
+h1{
+  font-size: 4rem
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}

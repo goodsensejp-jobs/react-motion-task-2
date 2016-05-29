@@ -1,25 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Aside from './src/aside';
+import Header from './src/header';
+import './src/base.css';
 
 export class App extends React.Component {
 
 	/**
-	 * Reverse hide state every 2 seconds
+	 * Set initial state
 	 */
 	componentWillMount() {
-		this.state = { hide: false };
-
-		setInterval(() => {
-			this.setState({ hide: !this.state.hide });
-		}, 2000);
+		this.state = { hide: true };
 	}
+
+  /**
+   * Toggle hide state
+   */
+  toggleSideNav() {
+    this.setState({ hide: !this.state.hide });
+  }
 
 	render() {
 		return (
-			<div>
-				<Aside hide={this.state.hide} />
-			</div>
+      <div>
+        <Header onMenuIconClick={this.toggleSideNav.bind(this)} />
+        <Aside hide={this.state.hide} />
+      </div>
 		);
 	}
 }

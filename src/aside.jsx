@@ -13,24 +13,17 @@ export default class Aside extends React.Component {
 		  left: 0,
 		  position: 'fixed',
 		  width: 250,
-		  backgroundColor: this.toColor(animatedValue.color),
+      visibility: this.props.hide ? 'hidden' : 'visible',
+		  backgroundColor: '#0197A7',
+      color: '#FFF',
 		  height: '100%'
 		}
-	}
-
-  /**
-   * Convert number to color
-   * @param  {number} num
-   * @return {string} rgba color
-   */
-	toColor(num) {
-    return "rgba(155, 255, " + parseInt(num) + ", 1)";
 	}
 
 	render() {
     // Animate aside color from 0 to 255 when hide state change
 		let animation ={
-      color: this.props.hide ? spring(0): spring(255)
+      color: this.props.hide ? spring(0): spring(255000)
 		}
 		return (
       <Motion style={animation}>
