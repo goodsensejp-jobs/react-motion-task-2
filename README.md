@@ -1,8 +1,9 @@
 # React Motion Task #2
-Task description...
+Create an aside as described in the given wireframes.
 
-
-The wireframes [Google docs](https://babeljs.io/).
+### Notes
+1. In the wireframes all text marked with asterik (*) must be passed to the component.
+2. Define all PropTypes needed in every component you create.
 
 ### To run
 
